@@ -8,6 +8,11 @@ for (int i = 0; i < n; i++)
 {
     Estudiante e = new Estudiante();
     Console.WriteLine($"Estudiante {i + 1}");
+    Console.WriteLine("Nombre: "); e.Nombre = Console.ReadLine();
+    Console.WriteLine("Nota 1: "); e.Nota1=double.Parse(Console.ReadLine());
+    Console.WriteLine("Nota 1: "); e.Nota2 = double.Parse(Console.ReadLine());
+    Console.WriteLine("Nota 1: "); e.Nota3 = double.Parse(Console.ReadLine());
+    estudiantes.Add(e);
 }
 
 class Estudiante
