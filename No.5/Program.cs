@@ -1,5 +1,26 @@
 ﻿using System;
 using System.Collections.Generic;
+List<Venta> ventas=new List<Venta>();
+Console.WriteLine("Cuantas ventas desea registrar?");
+int n=int.Parse(Console.ReadLine());
+for(int i=0;i<n;i++)
+{
+    Venta v=new Venta();
+    Console.WriteLine($"Venta {i+1}");
+    Console.WriteLine("Producto: "); v.Producto = Console.ReadLine();
+    Console.WriteLine("Precio: "); v.Precio=double.Parse(Console.ReadLine());
+    Console.WriteLine("Cantidad: "); v.Cantidad=int.Parse(Console.ReadLine());
+    ventas.Add(v);
+}
+Console.Clear();
+double total = 0;
+Console.WriteLine("Ventas registrada");
+foreach(Venta v in ventas)
+{
+    v.MostrarInformacion();
+    total += v.MontoTotal();
+}
+Console.WriteLine($"Total de ventas: {total:F2}");
 class Venta
 {
     public string Producto;
